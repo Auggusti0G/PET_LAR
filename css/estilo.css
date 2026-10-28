@@ -1,0 +1,143 @@
+/* ==================================================================
+   estilo.css - CSS próprio do Pet Lar
+   O Bootstrap faz quase tudo; aqui ficam só as cores da marca e
+   pequenos ajustes visuais.
+   ================================================================== */
+
+/* ---------- Cores da marca (variáveis CSS) ---------- */
+:root {
+    --pet-principal: #D9603B;   /* terracota: botões e destaques */
+    --pet-escuro:    #1F4E5F;   /* azul petróleo: menu e títulos */
+    --pet-claro:     #FBF6EF;   /* creme: fundo das páginas */
+    --pet-verde:     #3E8E6B;   /* status "Disponível" */
+    --pet-amarelo:   #E9A23B;   /* status "Em tratamento" */
+    --pet-borda:     #EADFD2;
+}
+
+body {
+    background-color: var(--pet-claro);
+    color: #2B2B2B;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; }
+
+/* ---------- Menu superior ---------- */
+.barra-pet {
+    background-color: var(--pet-escuro);
+}
+.barra-pet .nav-link.active {
+    color: #fff;
+    border-bottom: 3px solid var(--pet-principal);
+}
+
+/* ---------- Botão principal ---------- */
+.btn-pet {
+    background-color: var(--pet-principal);
+    border-color: var(--pet-principal);
+    color: #fff;
+}
+.btn-pet:hover,
+.btn-pet:focus {
+    background-color: #BF4F2D;
+    border-color: #BF4F2D;
+    color: #fff;
+}
+
+/* ---------- Títulos das páginas ---------- */
+.titulo-pagina {
+    color: var(--pet-escuro);
+    font-weight: 700;
+}
+.titulo-pagina i { color: var(--pet-principal); }
+
+/* ---------- Cartões ---------- */
+.card {
+    border: 1px solid var(--pet-borda);
+    border-radius: 14px;
+}
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid var(--pet-borda);
+    font-weight: 600;
+    color: var(--pet-escuro);
+    border-radius: 14px 14px 0 0 !important;
+}
+
+/* Cartões de números do painel e do relatório */
+.cartao-numero .numero {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--pet-escuro);
+}
+.cartao-numero .icone {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: var(--pet-principal);
+}
+.cartao-numero .icone.verde   { background-color: var(--pet-verde); }
+.cartao-numero .icone.amarelo { background-color: var(--pet-amarelo); }
+.cartao-numero .icone.escuro  { background-color: var(--pet-escuro); }
+
+/* Atalhos do painel */
+.atalho {
+    text-decoration: none;
+    color: var(--pet-escuro);
+    transition: transform .15s, box-shadow .15s;
+}
+.atalho:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .08);
+    color: var(--pet-principal);
+}
+.atalho i { font-size: 2rem; color: var(--pet-principal); }
+
+/* ---------- Tabelas ---------- */
+.table thead th {
+    background-color: var(--pet-escuro);
+    color: #fff;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Etiquetas de status dos animais */
+.status-disponivel { background-color: var(--pet-verde)     !important; }
+.status-tratamento { background-color: var(--pet-amarelo)   !important; }
+.status-adotado    { background-color: var(--pet-principal) !important; }
+
+/* Barra de progresso do relatório */
+.progress { height: 10px; border-radius: 6px; }
+.progress-bar { background-color: var(--pet-principal); }
+
+/* ---------- Tela de login ---------- */
+.pagina-login {
+    background: linear-gradient(135deg, var(--pet-escuro) 0%, #2E6E7E 55%, var(--pet-principal) 140%);
+}
+.cartao-login { border-radius: 20px; }
+.logo-circulo {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background-color: var(--pet-principal);
+    color: #fff;
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape-pet {
+    background-color: #fff;
+    border-top: 1px solid var(--pet-borda);
+    color: #6c757d;
+}
